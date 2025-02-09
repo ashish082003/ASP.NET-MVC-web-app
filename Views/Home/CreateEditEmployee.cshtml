@@ -1,0 +1,20 @@
+﻿@{
+    ViewData["Title"] = "Create/ Add ";
+}
+@model EmployeeData.Models.Employee
+
+<div class="text-center">
+    <h1 class="display-4">Create or Edit Employee</h1>
+</div>
+<form asp-action="CreateEditEmployeeForm" asp-controller="Home">
+   @* <label>Employee_id</label> *@
+   <input hidden class="form-control" type="number" placeholder="0" asp-for="EmployeeId" step=""/>
+    <label class="mt-4">Name</label>
+    <input class="form-control" type="text" placeholder="Enter Name" asp-for="Name" />
+    <label class="mt-4">Age</label>
+    <input class="form-control" type="number" placeholder="Enter Age" asp-for="Age" />
+    <label class="mt-4">Salary $</label>
+    <input class="form-control" type="number" placeholder="Enter Salary" asp-for="Salary" step="0.01" />
+
+    <button class="btn btn-primary mt-4" type="submit">Ok</button>
+</form>
